@@ -1,5 +1,5 @@
 {
-  "name": "video -player-t3",
+  "name": "video-player-t3",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -19,6 +19,9 @@
     "preview": "next build && next start",
     "start": "next start",
     "typecheck": "tsc --noEmit"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.2",
