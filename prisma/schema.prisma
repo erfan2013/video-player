@@ -84,7 +84,7 @@ model Video {
   user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
   videoEngagements  VideoEngagement[]
   comments          Comment[]
-  playlistHasViseos PlaylistHasViseo[]
+  playlistHasVideos PlaylistHasVideo[]
 
   @@index([userId])
 }
@@ -165,12 +165,12 @@ model Playlist {
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
   user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
-  playlistHasViseos PlaylistHasViseo[]
+  playlistHasVideos PlaylistHasVideo[]
 
   @@index([userId])
 }
 
-model PlaylistHasViseo {
+model PlaylistHasVideo {
   id         String   @id @default(cuid())
   playlistId String
   videoId    String
